@@ -31,7 +31,7 @@
   },
   "ava": {
     "files": [
-      "index.spec.js"
+      "is-balanced.spec.js"
     ],
     "concurrency": 5,
     "failFast": true,
@@ -44,7 +44,7 @@
       "ava/no-ignored-test-files": [
         "error",
         {
-          "files": ["test/**/*.spec.js"]
+          "files": ["is-balanced.spec.js", "test/**/*.spec.js"]
         }
       ],
       "no-unused-vars": [
