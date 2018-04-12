@@ -7,7 +7,8 @@
     "test": "xo && ava",
     "level1": "ava ./test/level1/level1.spec.js",
     "level2": "ava ./test/level2/level2.spec.js",
-    "level3": "ava ./test/level3/level3.spec.js"
+    "level3": "ava ./test/level3/level3.spec.js",
+    "testall": "npm test && npm run level1 && npm run level2 && npm run level3"
   },
   "keywords": [
     "balanced",
