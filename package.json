@@ -1,0 +1,81 @@
+{
+  "name": "balanced-brackets",
+  "version": "1.0.0",
+  "description": "Balanced brackets kata (problem and solution)",
+  "main": "index.js",
+  "scripts": {
+    "test": "xo && ava",
+    "level1": "ava ./test/level1/level1.spec.js",
+    "level2": "ava ./test/level2/level2.spec.js",
+    "level3": "ava ./test/level3/level3.spec.js"
+  },
+  "keywords": [
+    "balanced",
+    "brackets",
+    "kata",
+    "test"
+  ],
+  "author": "ti0ma",
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "nyc": "^11.6.0",
+    "xo": "^0.20.3"
+  },
+  "license": "ISC",
+  "nyc": {
+    "exclude": [
+      "**/*.spec.js",
+      "**/*.mock.js"
+    ]
+  },
+  "ava": {
+    "files": [
+      "index.spec.js"
+    ],
+    "concurrency": 5,
+    "failFast": true,
+    "failWithoutAssertions": false,
+    "powerAssert": false
+  },
+  "xo": {
+    "space": true,
+    "rules": {
+      "ava/no-ignored-test-files": [
+        "error",
+        {
+          "files": ["test/**/*.spec.js"]
+        }
+      ],
+      "no-unused-vars": [
+        "error",
+        {
+          "ignoreRestSiblings": true,
+          "args": "none"
+        }
+      ],
+      "no-warning-comments": [
+        0
+      ],
+      "arrow-parens": [
+        "error",
+        "always"
+      ],
+      "object-shorthand": [
+        "off"
+      ],
+      "object-curly-spacing": [
+        "error",
+        "always"
+      ]
+    },
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "paths": [
+            "./"
+          ]
+        }
+      }
+    }
+  }
+}
